@@ -1,0 +1,10 @@
+{
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "eslint.alwaysShowStatus": true,
+    "editor.formatOnSave": true,
+    "eslint.format.enable": true,
+    "files.eol": "\n",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+}
