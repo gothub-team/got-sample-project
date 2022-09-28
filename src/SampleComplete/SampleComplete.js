@@ -1,6 +1,10 @@
 import React from 'react';
-import { LoginForm } from './LoginForm';
+import { Provider } from 'react-redux';
+import { LoginForm } from '../Components/LoginForm';
+import { reduxStore } from './redux';
+import { TodoListScreen } from './TodoListScreen';
 import { useAuth } from './useAuth';
+import { getUserId } from './useUserNode';
 
 export const SampleComplete = () => {
     const [loggedIn, login, logout] = useAuth();
@@ -12,6 +16,10 @@ export const SampleComplete = () => {
     }
 
     return (
-        <div />
+        <Provider store={reduxStore}>
+            <TodoListScreen
+                nodeId={getUserId()}
+            />
+        </Provider>
     );
 };

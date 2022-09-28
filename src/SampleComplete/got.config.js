@@ -2,7 +2,7 @@ import { setup } from '@gothub-team/got-react';
 import { reduxStore } from './redux';
 
 export const {
-    useGraph: createGraph,
+    useGraph,
     store: gotStore,
     api: gotApi,
 } = setup({
