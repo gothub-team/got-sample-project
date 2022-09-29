@@ -1,12 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { LoginForm } from '../Components/LoginForm';
+import { getUserId } from './got.config';
 import { reduxStore } from './redux';
 import { TodoListScreen } from './TodoListScreen';
 import { useAuth } from './useAuth';
-import { getUserId } from './useUserNode';
 
-export const SampleComplete = () => {
+export const App = () => {
     const [loggedIn, login, logout] = useAuth();
 
     if (!loggedIn) {

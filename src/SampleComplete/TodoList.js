@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { v4 } from 'uuid';
 import { InputForm } from '../Components/InputForm';
 import { Todo } from '../Components/Todo';
@@ -6,7 +6,7 @@ import { useGraph } from './got.config';
 
 export const TodoList = ({ nodeId }) => {
     const {
-        useView, add, remove, merge, clear, push,
+        pull, useView, add, remove, push,
     } = useGraph('main', 'edit-list');
 
     const view = {
@@ -17,12 +17,16 @@ export const TodoList = ({ nodeId }) => {
                     as: 'todos',
                     include: {
                         node: true,
-                        edge: true,
+                        edges: true,
                     },
                 },
             },
         },
     };
+
+    useEffect(() => {
+        pull(view);
+    }, []);
 
     const viewRes = useView(view);
     const todos = Object.values(viewRes.todoList.todos || {}).sort((a, b) => a.node.name > b.node.name ? 1 : -1);
