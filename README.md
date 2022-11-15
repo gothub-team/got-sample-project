@@ -171,6 +171,23 @@ export const TodoListScreen = ({ nodeId }) => {
 };
 ```
 
+We'll also need to Render our new TodoListScreen in our App.js and give it a provider for the redux store, so out hooks have access to it. Let's replace our "You are logged in" div.
+```js
+// ./src/SampleSetup/App.js
+import { Provider } from 'react-redux';
+import { reduxStore } from './redux';
+
+// ...
+
+return (
+    <Provider store={reduxStore}>
+        <TodoListScreen
+            nodeId={getUserId()}
+        />
+    </Provider>
+);
+```
+
 To make it easier to select our todo node from the view result, we can use aliases for nodes in our view. This way they will apear under the given alias key in the view result.
 
 ```js
