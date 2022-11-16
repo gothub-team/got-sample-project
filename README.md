@@ -171,7 +171,7 @@ export const TodoListScreen = ({ nodeId }) => {
 };
 ```
 
-We'll also need to Render our new TodoListScreen in our App.js and give it a provider for the redux store, so out hooks have access to it. Let's replace our "You are logged in" div.
+We'll also need to Render our new TodoListScreen in our App.js and give it a provider for the redux store, so our hooks have access to it. Let's replace our "You are logged in" div.
 ```js
 // ./src/SampleSetup/App.js
 import { Provider } from 'react-redux';
