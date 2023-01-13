@@ -1,7 +1,7 @@
 # Getting started with got
 
 ## Get the sample project
-This is a guide to getting started using got. We will cover the setup, auth, creating and editing nodes and edges and connecting our app to a got API.
+This is a guide to getting started using got. We will cover the setup, auth as well as creating and editing of nodes and edges and connecting our app to a got API.
 To follow along we strongly recommend you clone the sample project from our github, which provides an already set up react-app as well as a completed version of this guide.
 
 ``` git clone https://github.com/gothub-team/got-sample-project.git```
